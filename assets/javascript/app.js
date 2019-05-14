@@ -14,12 +14,13 @@ var iCorrect = 0;
 var iIncorrect = 0;
 var iUnanswered = 0;
 var image = "";
+var iTimeBonus = 0;
 
 $timer.html("00:00")
 
 arrTriviaGame.push(new question("Mr. and Mrs. Dursley, of number four, Privit Drive, were proud to say they were perfectly normal, thank you very much.","hp.jpg","Harry Potter and the Sorcerer's Stone","Twilight","The Lightning Theif","The Hunger Games"))
 arrTriviaGame.push(new question("All happy families are alike; each unhappy family is unhappy in its own way.","anna.jpg","Anna Karenina","Little Women","War and Peace","Crime and Punishment"))
-arrTriviaGame.push(new question("Who is John Galt?","atlas.jpg","Atlas Shrugged","Angels and Demons","Pride and Prejudice","Tom Sawyer"))
+arrTriviaGame.push(new question('"Who is John Galt?"',"atlas.jpg","Atlas Shrugged","Angels and Demons","Pride and Prejudice","Tom Sawyer"))
 arrTriviaGame.push(new question("In the year 1878 I took my degree of Doctor of Medicine of the University of London, and proceeded to Netley to go through the course prescribed for surgeons in the Army.","holmes.jpg","A Study in Scarlet","Strange Case of Dr Jekell and Mr Hyde","Doctor Zhivago","One Flew Over the Cuckoo's Nest "))
 
 //Question prototype
@@ -34,8 +35,7 @@ arrQuestions = arrTriviaGame.slice(0);
 getNextQuestion()
 
 function startTimer(duration){
-    
-    debugger;
+        
     if(clockRunning=false){
         intervalId=setInterval(count,1000)
         clockRunning=true;
@@ -85,16 +85,18 @@ function timeConverter(t) {
 //Get Next Trivia Question
 function getNextQuestion(){
 
+    $imgBook.attr("src","");
+
     if($answers[0]){
         $questionText.empty();
-        $answers.empty();
+     //   $answers.empty();
     }
 
     if (arrQuestions.length > 0){
 
         //Get Random Question
         let randomQuestion = Math.floor(Math.random() * arrQuestions.length);
-        $questionText.text(arrQuestions[randomQuestion].questionText);
+        $questionText.html("<span class='fa fa-quote-left mr-3 text-muted'></span>" + arrQuestions[randomQuestion].questionText + "<span class= 'fa fa-quote-right ml-3 text-muted'></span>");
 
         //This bool ensures that only the FIRST index===0 will be marked as the correct answer.
         let isCorrectAnswerAssigned = false;
@@ -104,7 +106,7 @@ function getNextQuestion(){
             
             let randomAnswer = Math.floor(Math.random() * arrQuestions[randomQuestion].answers.length);
             let newLi = $("<li>")
-            newLi.addClass("js_answer")
+            newLi.addClass("list-group-item list-group-item-info js_answer")
             newLi.text(arrQuestions[randomQuestion].answers[randomAnswer]);
             if(randomAnswer===0){
                 if(isCorrectAnswerAssigned===false){
@@ -127,18 +129,19 @@ function getNextQuestion(){
 
         $(".js_answer").on("click",function(){
 
-            if (this.value === "1"){
+            if (this.value === 1){
 
-                iCorrect++
-                revealAnswer(8);
-
+                iCorrect++      
+                
+                iTimeBonus += time
+                
             }else{
 
-                iIncorrect++
-                revealAnswer(8);
+                iIncorrect++                
 
             }
 
+            revealAnswer();
             console.log(this.value)
         })
 
@@ -152,8 +155,19 @@ function getNextQuestion(){
 }
 
 function revealAnswer(){
+    console.log("time: " + time)
+    console.log("bonus: " + iTimeBonus)
+    console.log("correct " + iCorrect)
+
+        $answers.empty();
         $imgBook.attr("src", image)
-        getNextQuestion()
+
+        $timer.html("")
+        
+        clearInterval(intervalId);
+        setTimeout(getNextQuestion,8 * 1000)
+
+        
 }
 
 
