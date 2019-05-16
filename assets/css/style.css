@@ -16,6 +16,7 @@ p > span{
     top:-8px;   
 }
 .card-body{ 
+    min-width: 170px;
     min-height: 120px;    
 }
 .list-group-item:hover {
@@ -28,6 +29,9 @@ p > span{
     font-size: 16px;
 }
 @media screen and (max-width: 576px){
+    img{
+        height:200px;width: auto;    
+    }
     p{
         font-size:20px;
     }
@@ -40,4 +44,34 @@ p > span{
         min-width:345px;
         margin-bottom: 10px;
     }        
+}
+@media screen and (min-device-width: 577px) and (max-device-width: 750px) and (orientation : landscape){
+    img{
+        height:200px;width: auto;    
+    }
+    p{
+        font-size:20px;
+    }
+    .container{
+        margin:5px;
+        padding-left: 5px;
+        padding-right: 5px;        
+    }
+    .col-sm-1{
+        background-color: green;
+        flex-grow: 0;        
+        padding:0px;
+        width:0px;min-width: 0;max-width: 0;        
+    } 
+    .display-3{
+        font-size:50px; 
+        max-height:70px;               
+    }
+    .jumbotron{        
+        margin-bottom: 10px;
+        width:320px;
+    }       
+    .mb-4{
+        margin-bottom: 5px!important;
+    }
 }
