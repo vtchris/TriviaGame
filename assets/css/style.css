@@ -27,3 +27,17 @@ p > span{
 #losses{
     font-size: 16px;
 }
+@media screen and (max-width: 576px){
+    p{
+        font-size:20px;
+    }
+    .col-sm-1{
+        flex-grow: 0;        
+        padding:0px;
+        width:0px;
+    } 
+    .jumbotron{
+        min-width:345px;
+        margin-bottom: 10px;
+    }        
+}
