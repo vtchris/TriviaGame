@@ -15,12 +15,17 @@ p > span{
     position: relative;
     top:-8px;   
 }
-.card-body{ 
-    min-width: 170px;
+.card{
+    min-width: 200px;
+}
+.card-body{     
     min-height: 120px;    
 }
 .list-group-item:hover {
     background-color: silver;
+}
+.jumbotron{
+    min-width:320px;
 }
 #divQuestion{
     position: relative;
@@ -45,31 +50,31 @@ p > span{
         margin-bottom: 10px;
     }        
 }
-@media screen and (min-device-width: 577px) and (max-device-width: 750px) and (orientation : landscape){
+@media screen and (min-device-width: 577px) and (max-device-width: 775px) /*and (orientation : landscape)*/{
     img{
         height:200px;width: auto;    
     }
     p{
         font-size:20px;
     }
-    .container{
-        margin:5px;
-        padding-left: 5px;
-        padding-right: 5px;        
-    }
-    .col-sm-1{
+     .col-sm-1{
         background-color: green;
         flex-grow: 0;        
         padding:0px;
         width:0px;min-width: 0;max-width: 0;        
     } 
+    .container{
+        margin:5px;
+        padding-left: 5px;
+        padding-right: 5px;        
+    }
     .display-3{
         font-size:50px; 
         max-height:70px;               
     }
     .jumbotron{        
         margin-bottom: 10px;
-        width:320px;
+        min-width:320px;
     }       
     .mb-4{
         margin-bottom: 5px!important;
