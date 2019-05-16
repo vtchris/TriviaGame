@@ -1,5 +1,5 @@
 <h1>_SENTENCED_</h1>
-<p>A novel triva game where you match the *FIRST SENTENCE* with the name of the *NOVEL*. Are you a bookworm, or will you be *SENTENCED*?</p>
+A novel triva game where you match the *FIRST SENTENCE* with the name of the *NOVEL*. Are you a bookworm, or will you be *SENTENCED*?
 
 Play online at:
 https://vtchris.github.io/TriviaGame/
