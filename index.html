@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,20 +12,44 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body>
-    <div id="timer">
 
-    </div>
-    <section id="question" class="jumbotron">
-        
-        <div id="divQuestion">
-            <p id="questionText"></p>
+<body>
+    <header id="pageHeader" class="mb-4">
+        <h1 class="display-3 text-center bg-dark text-muted">Sentenced</h1>
+    </header>
+    <div id="container" class="container">
+        <!-- ROW 1-->
+        <div class="row">
+            <div class="col col-sm-1">
+            </div>
+            <div class="col col-sm-8 text-left">
+                <section id="question" class="jumbotron text-center">
+                    <div id="divQuestion">
+                        <p id="questionText"></p>
+                    </div>
+                </section>
+                <ul id="answers" class="p-0 text-center"></ul>
+            </div>
+            <div class="col col-sm-3">
+                <div id="answer-card" class="card text-center  text-light">
+                    <div class="card-header text-uppercase">
+                    </div>
+                    <div class="card-body">
+                        <img id="imgBook">
+                        <h3 id="timer" class="text-monospace"></h3>
+                    </div>
+                    <div class="card-footer bg-dark font-weight-bold">
+                    </div>
+                </div>
+            </div>
         </div>
-        <img id="imgBook">
-        <ul id="answers">
-        </ul>
-    </section>
+    </div>
+
+
+
+
 
     <script src="assets\javascript\app.js"></script>
 </body>
+
 </html>

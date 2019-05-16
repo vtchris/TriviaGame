@@ -1,17 +1,29 @@
+body{
+    background-image: url("../images/bedge_grunge.png");
+    width:100%;
+}
+header h1{
+    border-bottom: 2px solid #66ffff;
+}
 img{
-    height:400px;width: auto;    
+    height:250px;width: auto;    
 }
 p{
     font-size:24px;
 }
+p > span{
+    position: relative;
+    top:-8px;   
+}
+.card-body{ 
+    min-height: 120px;    
+}
+.list-group-item:hover {
+    background-color: silver;
+}
 #divQuestion{
     position: relative;
 }
-p > span{
-    position: relative;
-    top:-8px;
-   
-}
-.list-group-item:hover {
-    background-color: gray;
+#losses{
+    font-size: 16px;
 }
