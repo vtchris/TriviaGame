@@ -1,12 +1,10 @@
 <h1><em>SENTENCED</em></h1>
-<hr>
-<p>A novel triva game where you match the *FIRST SENTENCE* with the name of the *NOVEL*. Are you a bookworm, or will you be *SENTENCED*?</p>
+<p>A novel triva game where you match the <strong>FIRST SENTENCE</strong> with the name of the <strong>NOVEL</strong>. Are you a bookworm, or will you be <strong>SENTENCED</strong>?</p>
 
 Play online at:
 https://vtchris.github.io/TriviaGame/
 
 <h2>Technology</h2>
-<hr>
 <ul>
     <li>JavaScript</li>
     <li>jQuery</li>
