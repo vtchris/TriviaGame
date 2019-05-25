@@ -32,7 +32,7 @@ arrTriviaGame.push(new question("All happy families are alike; each unhappy fami
 arrTriviaGame.push(new question('"Who is John Galt?"', "atlas.jpg", "Atlas Shrugged", "Angels & Demons", "Pride and Prejudice", "Tom Sawyer"))
 arrTriviaGame.push(new question("In the year 1878 I took my degree of Doctor of Medicine of the University of London, and proceeded to Netley to go through the course prescribed for surgeons in the Army.", "holmes.jpg", "A Study in Scarlet", "Strange Case of Dr Jekell and Mr Hyde", "Doctor Zhivago", "One Flew Over the Cuckoo's Nest "))
 arrTriviaGame.push(new question("&quot;Where's Papa going with that ax?&quot;", "charlotte.jpg", "Charlotte's Web", "A Day No Pigs Would Die", "The Adventures of Huckleberry Finn", "Little Women"))
-arrTriviaGame.push(new question("It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way [...].", "twocities.jpg", "A Tale of Two Cities", "Les Miserables", "The Count of Monte Cristo", "The Jungle"))
+arrTriviaGame.push(new question("It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair [...].", "twocities.jpg", "A Tale of Two Cities", "Les Miserables", "The Count of Monte Cristo", "The Jungle"))
 arrTriviaGame.push(new question("Renowned curator Jacques Saunière staggered through the vaulted archway of the museum's Grand Gallery.", "davinci.jpg", "The Da Vinci Code", "Angels & Demons", "A Clockwork Orange", "Murder on the Orient Express"))
 arrTriviaGame.push(new question("It was a bright cold day in April, and the clocks were striking thirteen.", "1984.jpg", "1984", "Atlas Shrugged", "A Brave New World", "Fahrenheit 451"))
 arrTriviaGame.push(new question("When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow.", "mockingbird.jpg", "To Kill a Mockingbird", "The Catcher in the Rye", "Lord of the Flies", "Tom Sawyer"))
@@ -113,7 +113,7 @@ function getNextQuestion() {
 
         })
 
-        //Remove Question fro array
+        //Remove Question from array
         arrQuestions.splice(randomQuestion, 1);
 
         //Start timer for question
