@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html lang="en-US">
+        <head>
+            <title></title>
+            <link rel="stylesheet" href="">
+        </head>
+        <body>
+            <h3 id="answer"></h3>
+            <script>
+                var endingNumber = parseInt(prompt("What's your number?"))
+                var answer = document.getElementById("answer")
+                
+                answer.innerHTML=  writeInteger(endingNumber)
+
+
+                function writeInteger(i){
+                    var output = 0
+
+                    for(var x=0;x <= i;x++){
+                        output = output + x
+                    }
+
+                    return output   
+                }
+
+            </script>
+        </body>
+    </html>

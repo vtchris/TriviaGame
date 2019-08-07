@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <html lang="en-US">
+        <head>
+            <title>jQuery</title>
+            <link rel="stylesheet" href="">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        </head>
+        <body>
+            <ul id="ulDrinks"></ul>
+            <script>
+                var drinkList = ["coke","tea","mocha frap","wine"]
+
+                // drinkList.each(function(){
+                //     $("ulDrinks").html("<li>" + $(this).text() + "</li>")
+                // });
+
+                for(var i = 0; i < drinkList.length;i++){
+                    //console.log("<li>" + drinkList[i] + "</li>")
+                    $("#ulDrinks").append("<li>" + drinkList[i] + "</li>");
+                }
+            </script>
+        </body>
+    </html>

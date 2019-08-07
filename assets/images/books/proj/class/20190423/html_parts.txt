@@ -1,0 +1,12 @@
+<!DOCTYPE html> -- Instruction to the browser about what type of html is used.
+<html lang="en"> -- declares the site language is english
+<head> -- opens the head (which can contain title, styles, meta tags, scripts
+  <meta charset="UTF-8"> - Tells the browser that the universal 8 character set is being used.
+  <title>Document</title> -- Sets the title as "Document"
+  <link rel="stylesheet" href="style.css"> -- Links a css stylesheet in the same directory as the html file.
+</head> -- closes the head
+<body> -- opens the body (where the webpage actually is.)
+  
+  <script type="text/javascript" src="app.js"></script> -- links a js file in the same directory as the html
+</body> -- closes the body
+</html> -- closes the html file.

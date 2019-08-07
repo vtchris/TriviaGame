@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #answer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            color: black;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: 50px;
+            left: 150px;
+            line-height: 25px;
+            padding: 30px;
+            font-size: 25px;
+        }
+
+        #ball8 {
+            display: inline-block;
+            background-color: black;
+            border-radius: 50%;
+            width: 400px;
+            height: 400px;
+            position: relative;
+            top: 150px;
+            left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" style="position: relative;height:100%;">
+        <div id="ball8">
+            <div id="answer">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+       var answer = document.getElementById("answer")
+
+       answer.innerText = ""
+
+       var answers=["yes","no","outlook not clear","ask again later"]
+
+       document.onkeyup = function (event) {
+        random = Math.floor(Math.random() * answers.length)
+       
+        answer.innerText = answers[random];
+       }
+
+      
+
+
+    </script>
+
+
+</body>
+
+</html>
